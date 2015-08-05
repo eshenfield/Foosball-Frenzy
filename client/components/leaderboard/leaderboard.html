@@ -1,3 +1,5 @@
 <div>
-  {{ leaderboard.message }}
+  <ul>
+    <li ng-repeat="player in leaderboard.data.players">{{ player.name }} : {{player.rating}}</li
+  </ul>
 </div>

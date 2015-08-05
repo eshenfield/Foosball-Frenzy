@@ -1,10 +1,15 @@
 (function() {
   
-  function leaderboardCtrl($scope) {
+  function leaderboardCtrl($scope, Players) {
     vm = this;
 
-    this.message = "EMILY IS THE LEADER";
-  }
+    vm.data = {};
+
+    Players.getAllPlayers()
+    .then(function(players) {
+      vm.data.players = players;
+    });
+  };
 
   angular
     .module('foosballFrenzy')
