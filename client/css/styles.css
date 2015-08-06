@@ -1,0 +1,18 @@
+#wrapper {
+  margin: 10px;
+}
+.modal-body {
+  min-height: 75px;
+}
+.match-select {
+  border: 1px solid gray;
+}
+.match-date {
+  height: 21px;
+}
+.header {
+  margin-bottom: 20px;
+}
+.footer {
+  margin-bottom: 20px;
+}
