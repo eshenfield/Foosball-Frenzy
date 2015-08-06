@@ -132,7 +132,7 @@ module.exports = {
     })
     .then(function(results) {
       for (var i = 0; i < linkMap.length; i++) {
-        linkMap[i].value = results[i].length;
+        linkMap[i].value = results[i];
       }
       res.send(linkMap);
     })
