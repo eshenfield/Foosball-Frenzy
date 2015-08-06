@@ -1,6 +1,7 @@
 (function() {
   angular.module('foosballFrenzy', [
     'ui.router',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'd3'
   ])
 })();
