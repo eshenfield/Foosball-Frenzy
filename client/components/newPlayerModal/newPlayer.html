@@ -1,8 +1,11 @@
 <div class="modal-header">
-  <h3 class="modal-title">Record a New Match</h3>
+  <h3 class="modal-title">Add a New Player</h3>
 </div>
 <div class="modal-body">
-  <input ng-model="name" placeholder="Enter the new player's name" />
+  <div class="form-group">
+    <label>Player's Name: </label>
+    <input ng-model="name"/>
+  </div>
 </div>
 <div class="modal-footer">
   <button class="btn btn-primary" ng-click="ok()">Save Player</button>
