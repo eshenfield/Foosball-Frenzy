@@ -1,10 +1,14 @@
-<h2>
-Foosball Frenzy
-</h2>
-
-<div ng-controller="NewMatchCtrl">
-    <button class="btn btn-default" ng-click="open('lg')">Record a Match</button>
+<div class="row">
+  <h2 class="col-md-3">
+  Foosball Frenzy
+  </h2>
 </div>
-<div ng-controller="NewPlayerCtrl">
+
+<div class="row">
+  <div class="col-md-2" ng-controller="NewMatchCtrl">
+    <button class="btn btn-default" ng-click="open('lg')">Record a Match</button>
+  </div>
+  <div class="col-md-2" ng-controller="NewPlayerCtrl">
     <button class="btn btn-default" ng-click="open('lg')">Create a New Player</button>
+  </div>
 </div>
