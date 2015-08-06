@@ -64,8 +64,22 @@
         });
       };
 
+      var getLinkMap = function() {
+        return $http({
+          method: 'GET',
+          url: 'api/rivalries'
+        })
+        .then(function(res) {
+          return res.data;
+        })
+        .catch(function(err) {
+          console.error('Error! ', err);
+        });
+      }
+
       return {
-        createMatch: createMatch
+        createMatch: createMatch,
+        getLinkMap: getLinkMap
       }
     });
 })();
