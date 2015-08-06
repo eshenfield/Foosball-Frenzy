@@ -14,13 +14,8 @@ var Match = new Schema({
   date: { type: Date, default: Date.now()}
 });
 
-var Rivalry = new Schema({
-  id: {type: String, required: true},
-  matchups: [{ type: Date, default: Date.now(), required: true }]
-});
 
 module.exports = {
   player: mongoose.model('Player', Player),
-  match: mongoose.model('Match', Match),
-  rivalry: mongoose.model('Rivalry', Rivalry)
+  match: mongoose.model('Match', Match)
 };
