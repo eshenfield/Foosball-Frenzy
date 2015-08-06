@@ -19,7 +19,10 @@
                 var width = 960,
                     height = 500;
 
-                var color = d3.scale.category20c();
+                //var color = d3.scale.category20c();
+                var color = d3.scale.linear()
+                    .domain([0, 0.5, 1])
+                    .range(["red", "yellow", "green"]);
 
                 var force = d3.layout.force()
                     .charge(-120)
@@ -49,7 +52,9 @@
 
                       node.append("circle")
                           .attr("r", function(d) { return Math.pow(d.rating, 1/3); })
-                          .style("fill", function(d) { return color(d.rating); })
+                          .style("fill", function(d) { 
+                            mappedColor = (d.rating - 1000)/(2000 - 1000) * (1);
+                            return color(mappedColor); })
                           .attr("x", -8)
                           .attr("y", -8)
                           .attr("width", 16)
