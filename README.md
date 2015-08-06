@@ -9,3 +9,10 @@
 * Start up a local instance of mongodb with `mongod`
 * Run `grunt serve` to build and serve the files
 * Finally, open up [http://localhost:3000](http://localhost:3000) in your browser and start creating players and matches!
+
+###Screenshots
+![Graph View](./readme_images/graph.png)
+
+![New Match Module](./readme_images/new-match.png)
+
+![Leaderboard](./readme_images/leaderboard.png)
