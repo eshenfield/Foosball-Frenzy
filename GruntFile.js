@@ -79,9 +79,4 @@ module.exports = function(grunt) {
     'concat',
     'uglify'
   ]);
-
-  grunt.registerTask('build-deploy', [
-    'concat',
-    'uglify'
-  ]);
 };
