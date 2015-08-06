@@ -1,5 +1,16 @@
-<div>
-  <ul>
-    <li ng-repeat="player in leaderboard.data.players">{{ player.name }} : {{player.rating}}</li
-  </ul>
-</div>
+<tabset>
+<tab>
+  <tab-heading>Leaderboard</tab-heading>
+    <table class="table table-condensed">
+      <th>Name</th><th>ELO Rating</th>
+        <tbody>
+          <tr ng-repeat="player in leaderboard.data.players"><td>{{ player.name }}</td> <td>{{player.rating}}</td></tr>
+      </tbody>
+    </table>
+</tab>
+
+<tab>
+  <tab-heading>Test</tab-heading>
+  <graph></graph>
+</tab>
+</tabset>
