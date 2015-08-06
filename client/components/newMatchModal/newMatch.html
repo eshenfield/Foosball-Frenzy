@@ -2,22 +2,26 @@
   <h3 class="modal-title">Record a New Match</h3>
 </div>
 <div class="modal-body">
-  <select class="col-md-3 btn btn-white dropdown-toggle"
-          ng-options="player.name for player in players track by player._id"
-          ng-model="winner">
-  </select>
-  <select class="col-md-3 btn btn-white dropdown-toggle"
-          ng-options="player.name for player in players track by player._id"
-          ng-model="loser">
-  </select>
-  <div class="col-md-3">
-      <p class="input-group">
-        <input type="date" class="form-control" datepicker-popup ng-model="date" is-open="opened" max-date="'2020-06-22'" ng-required="true" close-text="Close" />
-        <span class="input-group-btn">
-          <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
-        </span>
-      </p>
-  </div>
+  <form class="form-inline">
+    <div class="form-group col-md-3">
+      <label>Winner: </label>
+      <select class="btn match-select"
+              ng-options="player.name for player in players track by player._id"
+              ng-model="winner">
+      </select>
+    </div>
+    <div class="form-group col-md-3">
+      <label>Loser: </label>
+      <select class="btn match-select"
+              ng-options="player.name for player in players track by player._id"
+              ng-model="loser">
+      </select>
+    </div>
+    <div class="form-group col-md-5">
+      <label>Date: </label>
+      <input type="date" class="form-control match-date" datepicker-popup ng-model="date" is-open="opened" max-date="'2020-06-22'" ng-required="true" close-text="Close" />
+    </div>
+  </form>
 </div>
 <div class="modal-footer">
   <button class="btn btn-primary" ng-click="ok()">Save Match</button>
