@@ -63,12 +63,12 @@ module.exports = {
     .then(function(results) {
       winner = results[0];
       loser = results[1];
+      // create match with winner and loser's reference ids
       newMatch = new Match({
         winner: winner._id,
         loser: loser._id,
         date: req.body.date
       });
-      // create match with winner and loser's reference ids
       return createMatch(newMatch);
     })
     .then(function(createdMatch) {
@@ -114,7 +114,7 @@ module.exports = {
       res.status(500).send({ error: 'Internal Server Error' });
     })
   },
-  /*    Request Handlers for /api/rivalries   */
+  /*    Request Handler for /api/rivalries   */
   findAllRivalries: function(req, res) {
     var findPlayers = Q.nbind(Player.find, Player);
     var linkMap = [];
