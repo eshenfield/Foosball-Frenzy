@@ -4,14 +4,23 @@
   "description": "A foosball scoring app",
   "main": "server/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/server.js",
+    "postinstall": "echo postinstall time; ./node_modules/grunt-cli/bin/grunt build && ./node_modules/bower/bin/bower install"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "~1.0.1",
     "express": "~4.0.0",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-nodemon": "^0.4.0",
+    "load-grunt-tasks": "^3.2.0",
     "mongoose": "~3.6.13",
+    "nodemon": "^1.4.0",
     "q": "^1.4.1"
   }
 }
