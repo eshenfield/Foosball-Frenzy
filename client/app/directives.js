@@ -19,11 +19,11 @@
                 var width = 960,
                     height = 500;
 
-                var color = d3.scale.category20();
+                var color = d3.scale.category20c();
 
                 var force = d3.layout.force()
                     .charge(-120)
-                    .linkDistance(100)
+                    .linkDistance(200)
                     .size([width, height]);
 
                 var svg = d3.select(element[0]).append("svg")
@@ -39,7 +39,7 @@
                       .data(graph.links)
                       .enter().append("line")
                       .attr("class", "link")
-                      .style("stroke-width", function(d) { return d.value });
+                      .style("stroke-width", function(d) { return d.value.length });
 
                   var node = svg.selectAll(".node")
                       .data(graph.nodes)
